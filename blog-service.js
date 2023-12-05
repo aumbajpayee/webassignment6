@@ -1,21 +1,16 @@
-
 const fs = require('fs');
 const Sequelize = require('sequelize')
 
-var sequelize = new Sequelize(
-    "SenecaDB",
-    "bajpayeeaum%40gmail.com",
-    "15KrtSFyNmTi",
-    {
-      host: "ep-green-cake-40317335-pooler.us-east-2.aws.neon.tech",
-      dialect: "postgres",
-      port: 5432,
-      dialectOptions: {
-        ssl: { rejectUnauthorized: false },
-      },
-      query: { raw: true },
-    }
-  );
+var sequelize = new Sequelize("SenecaDB", "bajpayeeaum%40gmail.com", "15KrtSFyNmTi", {
+    host: "ep-green-cake-40317335.us-east-2.aws.neon.tech",
+    dialect: "postgres",
+    port: 5432,
+    dialectOptions: {
+      ssl: { rejectUnauthorized: false },
+    },
+    query: { raw: true },
+  }
+);
 
 const Post = sequelize.define("Post", {
     body: Sequelize.TEXT,
